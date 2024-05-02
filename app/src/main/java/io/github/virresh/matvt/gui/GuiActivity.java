@@ -80,7 +80,7 @@ public class GuiActivity extends AppCompatActivity {
         bt_saveBossKeyValue.setOnClickListener(view -> {
             String dat = et_override.getText().toString();
             dat = dat.replaceAll("[^0-9]", "");
-            int keyValue; if (dat.isEmpty()) keyValue = KeyEvent.KEYCODE_VIDEO_APP_2;
+            int keyValue; if (dat.isEmpty()) keyValue = 290; // Sonim XP3900's speakerphone button
             else keyValue = Integer.parseInt(dat);
             isBossKeyChanged();
             Helper.setOverrideStatus(this, isBossKeyChanged());
