@@ -43,7 +43,7 @@ public class MouseEventService extends AccessibilityService {
     protected void onServiceConnected() {
         super.onServiceConnected();
         Log.i(TAG_NAME, "Starting service initialization sequence. App version " + BuildConfig.VERSION_NAME);
-        bossKey = KeyEvent.KEYCODE_VIDEO_APP_2;
+        bossKey = 290; // Sonim XP3900's speakerphone button
         PointerControl.isBordered = Helper.getMouseBordered(this);
         scrollSpeed = Helper.getScrollSpeed(this);
         MouseEmulationEngine.isBossKeyDisabled = Helper.isBossKeyDisabled(this);
